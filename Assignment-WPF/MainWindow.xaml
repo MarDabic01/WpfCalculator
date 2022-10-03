@@ -1,0 +1,29 @@
+﻿<Window x:Class="Assignment_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" Margin="50" HorizontalAlignment="Center">
+            <TextBox Name="num1" Width="100" Height="50" TextAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            <Label Name="operationLabel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30">+</Label>
+            <TextBox Name="num2" Width="100" Height="50" TextAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30">=</Label>
+            <TextBox Name="result" Width="100" Height="50" TextAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" TextWrapping="Wrap"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <RadioButton x:Name="opr1" IsChecked="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Checked="RadioButton_Checked">Sabiranje</RadioButton>
+            <RadioButton x:Name="opr2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Checked="RadioButton_Checked_1">Oduzimanje</RadioButton>
+            <RadioButton x:Name="opr3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Checked="RadioButton_Checked_2">Mnozenje</RadioButton>
+            <RadioButton x:Name="opr4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Checked="RadioButton_Checked_3">Dijeljenje</RadioButton>
+            <Button Content="IZRACUNAJ" Margin="0,30,0,0" Height="30" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
